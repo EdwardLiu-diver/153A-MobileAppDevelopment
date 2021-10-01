@@ -83,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
             color='red'
             onPress={() =>
               navigation.navigate('F1 Drivers 2021', { name: 'Tim', greeting:'Konichi-wa' })
-                // we're passing a parameter name:'Jane' to the Profile component!
+
             }
           />
         
