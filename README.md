@@ -16,15 +16,27 @@ In this app, you can get some information about F1 racing schedule, F1 drivers, 
 
 ## Developer Notes
 "expo-constants": "~11.0.2",
+
 "react-navigation",
+
 "@expo/vector-icons": "^12.0.0",
+
 "react-native-paper": "3.6.0",
+
 "react-native-screens": "~3.4.0",
+
 "react-navigation-stack",
+
 "@react-navigation/native",
+
 "react-native-gesture-handler": "~1.10.2",
+
 "@react-navigation/bottom-tabs",
+
 "@react-navigation/native-stack",
+
 "react-native-safe-area-context": "3.2.0",
+
 "@react-native-community/masked-view": "0.1.10",
+
 "@react-native-async-storage/async-storage": "~1.15.0"
