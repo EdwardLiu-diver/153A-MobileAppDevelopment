@@ -3,6 +3,7 @@ import {View,Text,Image,Button,ImageBackground,StyleSheet,TouchableOpacity,TextI
 import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+
 const Profile= ({ route, navigation }) => {
   const [info, setInfo] = useState({ name: '', email: '' });
   const [name, setName] = useState('');
@@ -117,8 +118,6 @@ const Profile= ({ route, navigation }) => {
       </View>
 
 
-
-
     <View style={{backgroundColor: 'white',marginTop: 'auto'}}>
           <Button title="Notifications" />
           <Button title="Subscribe" />
@@ -142,7 +141,7 @@ const styles = StyleSheet.create({
     height: 60,
     borderColor: 'gray',
     borderWidth: 1,
-    paddingleft: 8,
+    //paddingleft: 8,
     marginLeft: 8,
   },
   header: {

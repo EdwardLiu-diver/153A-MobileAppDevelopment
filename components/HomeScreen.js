@@ -2,9 +2,11 @@ import React from "react";
 import {View,Text,Image,Button,ImageBackground,StyleSheet} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-
+import {useValue} from "./ValueContext";
 
 const HomeScreen= ({ navigation }) => {
+      let {currentValue} = useValue()
+
   return (
     <View>
       <View>
@@ -37,21 +39,17 @@ const HomeScreen= ({ navigation }) => {
         <Text style={styles.paragraph}>Up coming Event:</Text>
       </View>
       <View>
-        <Text style={styles.news}> Saudi Arabian Grand Prix</Text>
+        <Text style={styles.news}> Abu Dhabi Grand Prix</Text>
         <Image
           style={{ width: '100%', height: 190 }}
           resizeMode="cover"
           source={{
-            uri: 'https://pbs.twimg.com/media/FDvnejlWQAAxaM7?format=jpg&name=large',
+            uri: 'https://www.formula1.com/content/dam/fom-website/manual/XPB_Images/XPB_1025166_HiRes.jpg.transform/9col-retina/image.jpg',
           }}
         />
-        {
-          <Button
-            title="Login"
-            color="red"
-            onPress={() => navigation.navigate('Profile')}
-          />
-        }
+
+        <Text style={{fontSize:15}}>Your Home Team:{currentValue.team}</Text>
+          <Text style={{fontSize:15}} >Driver You support:{currentValue.driver}</Text>
       </View>
     </View>
   );

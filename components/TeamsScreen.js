@@ -1,6 +1,7 @@
 import React from "react";
 import {View,Text,Image,Button,ImageBackground,StyleSheet,TouchableOpacity,TextInput,FlatList} from 'react-native';
 import { useState, useEffect } from 'react';
+import {useValue} from "./ValueContext";
 
 const TeamsScreen= ({ route, navigation }) => {
   const [passionTeam, setPassionTeam] =useState('');
@@ -53,6 +54,7 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
   </TouchableOpacity>
 );
 const [selectedId, setSelectedId] = useState(null);
+const {currentValue,setCurrentValue} = useValue();
 
   const renderItem = ({ item }) => {
     const backgroundColor = item.id === selectedId ? "red" : "white";
@@ -60,7 +62,7 @@ const [selectedId, setSelectedId] = useState(null);
     return (
       <Item
         item={item}
-        onPress={() => {setSelectedId(item.id),setPassionTeam(item.title)}}
+        onPress={() => {setSelectedId(item.id),setPassionTeam(item.title),setCurrentValue({...currentValue,team:item.title})}}
         backgroundColor={{ backgroundColor}}
         textColor={{ color }}
       />
@@ -96,7 +98,7 @@ const [selectedId, setSelectedId] = useState(null);
           Your Home Team: {passionTeam}
         </Text>
       </View>
-      
+
       <View style={{flex: 1}}>
         <FlatList
         data={DATA}
@@ -104,6 +106,7 @@ const [selectedId, setSelectedId] = useState(null);
         keyExtractor={(item) => item.id}
         extraData={selectedId}
       />
+
       </View>
     </View>
   );
@@ -114,7 +117,7 @@ const styles = StyleSheet.create({
     height: 60,
     borderColor: 'gray',
     borderWidth: 1,
-    paddingleft: 8,
+    //paddingleft: 8,
     marginLeft: 8,
   },
   item: {

@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
+import ValueProvider from "./components/ValueContext";
 
 
 const Stack = createNativeStackNavigator();
@@ -25,7 +26,9 @@ const MyStack = () => {
 
 const Tab = createBottomTabNavigator();
 export default function App() {
+  const data={team:"",driver:"",}
   return (
+   <ValueProvider value={data}>
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
@@ -54,6 +57,7 @@ export default function App() {
         <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
+    </ValueProvider>
   );
 }
 

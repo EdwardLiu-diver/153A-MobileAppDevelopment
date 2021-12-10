@@ -1,13 +1,13 @@
 import React from "react";
 import {View,Text,Image,Button,ImageBackground,StyleSheet,TextInput} from 'react-native';
 import {SafeAreaView, SectionList, StatusBar,ScrollView } from "react-native";
-
+import {useValue} from "./ValueContext";
 
 const DriversScreen= ({ route, navigation }) => {
 
 
   const [input, onChangestock] = React.useState(null);
-
+  const {currentValue,setCurrentValue} = useValue();
   const Item = ({ title }) => (
   <View style={styles.item}>
     <Text style={styles.title}>{title}</Text>
@@ -15,7 +15,7 @@ const DriversScreen= ({ route, navigation }) => {
 );
   return (
     <ScrollView>
-      <View>
+      <View style={{flexDirection:'row'}}>
         <TextInput
           style={styles.inputtext}
           clearButtonMode="while-editing"
@@ -23,6 +23,15 @@ const DriversScreen= ({ route, navigation }) => {
           onChangeText={onChangestock}
           value={input}
         />
+        <Button
+          color="red"
+          title="Set"
+          onPress={() => {
+            setCurrentValue({...currentValue,driver:input});
+          }}
+        />
+      </View>
+      <View>
         <Text
           style={{
             fontStyle: 'italic',
@@ -49,7 +58,7 @@ const DriversScreen= ({ route, navigation }) => {
 
       </ImageBackground>
       <ScrollView style={{flex:1}}>
-      
+
       </ScrollView>
     </ScrollView>
   );
@@ -104,7 +113,7 @@ const DATA = [
 
 
 const styles = StyleSheet.create({
-  
+
   item: {
     padding: 20,
     marginVertical: 8,
@@ -113,18 +122,17 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 30,
     color:'white',
-    
+
   },
   title: {
     fontSize: 25,
     color:'red',
   },
   inputtext: {
-    width: 380,
+    width: 250,
     height: 60,
     borderColor: 'gray',
     borderWidth: 1,
-    paddingleft: 8,
     marginLeft: 8,
   },
 });
