@@ -20,9 +20,15 @@ If you're having problems, you can tweet to us [@expo](https://twitter.com/expo)
 
 ## Screen Shot
 
-<img width="331" alt="Screen Shot 2021-11-12 at 10 32 10 AM" src="https://user-images.githubusercontent.com/56251687/141492454-990078ee-10c4-4edd-ba93-8917121de228.png">
+
+<img width="332" alt="Screen Shot 2021-11-12 at 10 33 37 AM" src="https://user-images.githubusercontent.com/56251687/145601138-65b9332e-191a-4013-a979-c65ce0d8e05b.jpeg">
 
 <img width="332" alt="Screen Shot 2021-11-12 at 10 33 37 AM" src="https://user-images.githubusercontent.com/56251687/141492579-42a03c4f-e0e5-4092-a8bc-a71650315cbf.png">
+<img width="332" alt="Screen Shot 2021-11-12 at 10 33 37 AM" src="https://user-images.githubusercontent.com/56251687/145601048-75f8f88b-ca74-4707-8e25-d0ce7a15e34d.PNG">
+<img width="332" alt="Screen Shot 2021-11-12 at 10 33 37 AM" src="https://user-images.githubusercontent.com/56251687/145600946-0c28ce19-4652-4b27-a046-027e5e92dcf4.PNG">
+
+
+
 
 ## Developer Notes
 "expo-constants": "~11.0.2",
