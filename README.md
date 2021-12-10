@@ -1,13 +1,18 @@
 # F1 Gallery app
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+
 
 ## Introduction
 Are you a fan of formula one racing? F1 is the highest class of international auto racing for single-seater formula cars. With this app, you can learn about 10 F1 constructors and 20 drivers, choose your favorite driver or team, and cheer for the championship race throughout the year. At the same time, the APP has a certain schedule attribute, it will remind the next game time and location on the home page. In the future work, I want to add the circuit informations and more background stories about the drivers and constructors. 
 
+Movie Link:
+https://drive.google.com/file/d/1g8aJMF0-6bi2MjRt3TFiya3cXXdOAr-b/view?usp=sharing
+
+Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
 When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo-cli](https://docs.expo.io/get-started/installation).
 
-F1 gallery app is an app foucus on showing information about Formula One racing.
-In this app, you can get some information about F1 racing schedule, F1 drivers, and F1 teams.
+
+
+
 All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
 
 If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io/c/snack).
